@@ -173,6 +173,10 @@ body {
 
 /* Секція "Герой" */
 .hero {
+  background-image: url("../img/hero/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .hero__container {
   display: flex;
@@ -195,7 +199,7 @@ body {
   color: var(--accent-color);
 }
 .hero-right {
-  background-color: #191c26;
+  /* background-color: #191c26; */
   flex-grow: 1;
   padding-top: 172px;
   padding-bottom: 206px;
@@ -261,8 +265,12 @@ body {
 }
 /* Секція "Послуги і ціни" */
 .prices {
+  background-color: #111319;
+  background-image: url("../img/price/prices-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 130px 0;
-  background-color: #191c26;
 
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../img/price/4bd1963510d23357075bc4fa1c6c7fad.jpg");
@@ -410,30 +418,32 @@ body {
 .gallery-list__img {
 }
 
-/* Секція "Контакти" */
-.contacts {
+/* Форма онлайн-запису */
+.online {
   padding: 130px 0;
   background-color: #191c26;
 }
-.contacts__container {
-  display: flex;
+.online__container {
 }
-/* Форма онлайн-запису */
-.online {
-  background-color: #191c26;
-  width: 50%;
-}
-
 .online__title {
   color: var(--first-title-color);
   margin-bottom: 44px;
 }
 
-/* contacts__right */
-
-.contacts__right {
-  width: 50%;
-  margin-left: 99px;
+/* Секція "Контакти" */
+.contacts {
+  padding: 130px 0;
+  background-color: #111319;
+  background-image: linear-gradient(
+      rgba(2, 1, 1, 0.649),
+      rgba(18, 18, 18, 0.87)
+    ),
+    url("../img/contacts/c2e444e2ecad630bab1e61589d96b950\ \(1\).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.contacts__container {
 }
 
 .contacts__title {
