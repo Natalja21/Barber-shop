@@ -10,16 +10,17 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha384-HAvlG5RMYR9oy/r9tX/AYGoy9WsVvtDOiCZn6C2qo+53oNQzNnQqPq5kxIS9Vkf0" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!--Шапка-->
     <header class="header">
       <div class="header__container container">
-          <a class="header__logo logo" href="./index.html"
+        <nav class="header-nav">
+          <a class="header-nav__logo logo" href="./index.html"
             ><img src="./img/Logo (2).svg" alt="logo" width="66" height="55"
           /></a>
-           <nav class="header-nav"></nav>
           <ul class="header-nav__list">
             <li class="header-nav__item">
               <a class="header-nav__link" href="#about">Про нас</a>
@@ -37,7 +38,7 @@
         </nav>
         <div class="header-contacts">
           <a class="header-contacts__tel" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn-registration" type="button">онлайн-запис</button>
+          <button class="header-contacts__btn btn-registration" type="button">онлайн-запис</button>
         </div>
       </div>
     </header>
@@ -53,10 +54,10 @@
             <a class="hero-social-list__link" href="" lang="en">Youtube</a>
           </li>
         </ul>
-        <div class="hero-left">
-        <p class="hero-left__subtitle" lang="en">A hair salon for men in Kyiv</p>
-        <h1 class="hero-left__title" lang="en">BarberShop</h1>
-        <p class="hero-left__text">
+        <div class="hero-right">
+        <p class="hero-right__pre-title pre-title" lang="en">A hair salon for men in Kyiv</p>
+        <h1 class="hero-right__title" lang="en">BarberShop</h1>
+        <p class="hero-right__after-title after-title">
           Ми експерти у модних чоловічих стрижках. Працюємо швидко, обережно та
           зі смаком.
         </p>
@@ -88,8 +89,8 @@
         </ul>
         <div class="about-content">
           <p class="about-content__pre-title">Про нас</p>
-          <h2 class="about-content__title">Найкращий Барбершоп твого міста</h2>
-          <h3 class="about-content__after-title">
+          <h2 class="about-content__title title">Найкращий Барбершоп твого міста</h2>
+          <h3 class="about-content__after-title after-title">
             Якщо ти хочеш додати у свій образ більше впевненості, тобі точно до
             нас.
           </h3>
@@ -106,40 +107,39 @@
       <!--Послуги і ціни-->
       <section id="price" class="prices">
         <div class="prices__container container">
-        <h3 class="prices__subtitle" >Проведи час у компанії кращих майстрів</h3>
-        <h2 class="prices__title">Послуги та ціни</h2>
-        <div class="prices__boxes">
+        <h3 class="prices__pre-title pre-title" >Проведи час у компанії кращих майстрів</h3>
+        <h2 class="prices__title title">Послуги та ціни</h2>
+        <div class="prices__wrap">
           <ul class="prices-list">
             <li class="prices-list__item">
-              <p class="prices-list__service">Чоловіча стрижка<span >від 300 грн.</span></p>
+              <p class="prices-list__service">Чоловіча стрижка</p><span >від 300 грн.</span>
             </li>
             <li class="prices-list__item">
-              <p class="prices-list__service">Стрижка бороди <span >від 200 грн.</span ></p>
+              <p class="prices-list__service">Стрижка бороди</p><span >від 200 грн.</span >
             </li>
             <li class="prices-list__item">
-              <p class="prices-list__service">Стрижка вусів <span">від 200 грн.</span></p>
+              <p class="prices-list__service">Стрижка вусів</p><span">від 200 грн.</span>
             </li>
             <li class="prices-list__item">
-              <p class="prices-list__service">Гоління небезпечною бритвою<span>від 200 грн.</span></p>
-            </li>
+              <p class="prices-list__service">Гоління небезпечною бритвою</p><span>від 200 грн.</span>
           </ul>
           <ul class="prices-list">
             <li class="prices-list__item">
-              <p class="prices-list__service">Стрижка у стажера<span>від 50 грн.</span></p>
+              <p class="prices-list__service">Стрижка у стажера</p><span>від 50 грн.</span>
             </li>
             <li class="prices-list__item">
-              <p class="prices-list__service">Стрижка під насадку<span>від 200 грн.</span></p>
+              <p class="prices-list__service">Стрижка під насадку</p><span>від 200 грн.</span>
             </li>
             <li class="prices-list__item">
-              <p class="prices-list__service">Дитяча стрижка (до 12 років)<span>від 300 грн.</span></p>
+              <p class="prices-list__service">Дитяча стрижка (до 12 років)</p><span>від 300 грн.</span>
             </li>
             <li class="prices-list__item">
-              <p class="prices-list__service">Камуфлювання сивини<span>від 200 грн.</span></p>
+              <p class="prices-list__service">Камуфлювання сивини<span></p>від 200 грн.</span>
             </li>
           </ul>
         </div>
         <div class="prices-btn-container">
-        <button class="btn-registration" type="button">онлайн-запис</button>
+        <button class=" prices-btn btn-registration " type="button">онлайн-запис</button>
         </div>
       </div>
       </section>
@@ -165,9 +165,9 @@
             </li>
           </ul>
         <div>
-          <p class="reasons__subtitle">стара традиційна школа</p>
-          <h2 class="reasons__title">Чому приходять саме до нас?</h2>
-          <p class="reasons__text">
+          <p class="reasons__pre-title pre-title">стара традиційна школа</p>
+          <h2 class="reasons__title title">Чому приходять саме до нас?</h2>
+          <p class="reasons__after-title after-title">
             Про нас говорять лише добре. Але краще 1 раз побачити та відчути,
             ніж 10 разів прочитати.
           </p>
@@ -177,8 +177,8 @@
       <!--Наші майстри-->
       <section id="masters">
         <div class="masters__container container">
-        <h3 class="masters__subtitle">для справжніх поціновувачів атмосфери</h3>
-        <h2 class="masters__title">Наші майстри</h2>
+        <h3 class="masters__pre-title pre-title">для справжніх поціновувачів атмосфери</h3>
+        <h2 class="masters__title title">Наші майстри</h2>
         <ul class="masters-list">
           <li class="masters-list__item">
             <img class="masters-list__img" src="./img/masters/img1desk.jpg" alt="barber" />
@@ -220,8 +220,8 @@
       <!--Портфоліо-->
       <section class="gallery">
         <div class="gallery__container container">
-        <h3 class="gallery__subtitle">латинською мовою "барба" означає "борода"</h3>
-        <h2 hidden>Портфоліо</h2>
+        <h3 class="gallery__pre-title pre-title">латинською мовою "барба" означає "борода"</h3>
+        <h2 class="visually-hidden" >Портфоліо</h2>
         <ul class="gallery-list">
           <li class="gallery-list__item">
             <img class="gallery-list__img"
@@ -233,7 +233,7 @@
             <img class="gallery-list__img"
               src="./img/gallery/Rectangle 26desk.jpg"
               alt="the work of a barber"
-            />
+            />,
           </li>
           <li class="gallery-list__item">
             <img class="gallery-list__img"
@@ -255,10 +255,10 @@
     <section id="contacts" class="contacts">
       <div class="contacts__container container">
         <div class="online" >
-           <h2 class="online__title">Онлайн-запис</h2>
+           <h2 class="online__title title">Онлайн-запис</h2>
       </div>
       <div class="contacts__right">
-          <h2 class="contacts__title">Контакти</h2>
+          <h2 class="contacts__title title">Контакти</h2>
           <address class="contacts-address">
             <ul class="contacts-address__list">
               <li class="contacts-address__item">
@@ -267,19 +267,19 @@
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  вул. Волошкова, 7, Київ, 08131
+                  вул. Василькова, 7А, Киів, 08132
                   </a>
               </li>
               <li class="contacts-address__item">
                 <a class="contacts-address__link" href="tel:+380441111111">+38 044 111 11 11</a>
               </li>
               <li class="contacts-address__item">
-                <a class="contacts-address__link" href="mailto:barbershop@email.com">barbershop@email.com</a>
+                <a class="contacts-address__link  contacts-address__link--decoration" href="mailto:barbershop@email.com">barbershop@email.com</a>
               </li>
             </ul>
           </address>
-          <p class="contacts__botton-title">час роботи</p>
-          <p class="contacts__botton-text">
+          <p class="contacts__botton-title pre-title">час роботи</p>
+          <p class="contacts__botton-text after-title">
             Щоденно з <time datetime="09:00">09:00</time> до
             <time datetime="22:00">22:00</time>
           </p>

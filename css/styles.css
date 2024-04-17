@@ -1,22 +1,20 @@
-
+/* ------Змінні------- */
 :root {
-   --first-title-color:#FFFFFF;
-   --first-subtitle-color:rgba(157, 164, 189, 0.6);
-   --first-text-color: #9DA4BD;
-   --second-title-color: #303030;
-   --second-subtitle-color: #303030;
-   --second-text-color: #555555;
-   --third-text-color: #303030;
-   --header-links-color:#FFFFFF;
-   --hero-links-color:#303030;
-   --accent-color:#FF6C00;
-   --first-btn-color: #FFFFFF;
-   --second-btn-color:#303030;
-
+  --first-title-color: #ffffff;
+  --first-subtitle-color: rgba(157, 164, 189, 0.6);
+  --first-text-color: #9da4bd;
+  --second-title-color: #303030;
+  --second-subtitle-color: #303030;
+  --second-text-color: #555555;
+  --third-text-color: #303030;
+  --header-links-color: #ffffff;
+  --hero-links-color: #303030;
+  --accent-color: #ff6c00;
+  --first-btn-color: #ffffff;
+  --second-btn-color: #303030;
 }
-body {
-    font-family: 'Open Sans', sans-serif;
-}
+/* ----------reset----------- */
+/* підключено modern-normalize з хешуванням(srihash) для скидання стандартних стилів браузера */
 p,
 h1,
 h2,
@@ -25,407 +23,481 @@ h4,
 h5,
 h6,
 p {
-    margin: 0;
+  margin: 0;
 }
 
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 img {
-    display: block;
+  display: block;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
+
+address {
+  font-style: normal;
+}
+button {
+  cursor: pointer;
+}
+
+/* -------Загальні стилі------------ */
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 .container {
-padding-left: 55px;
-padding-right: 55px;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.pre-title {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.title {
+  font-family: Raleway;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+.after-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+.btn-registration {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  color: var(--first-btn-color);
+  text-transform: uppercase;
+  width: 140px;
+  height: 40px;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  background-color: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-registration:hover {
+  background-color: var(--accent-color);
+}
+.btn-registration--color {
+  color: var(--second-btn-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-registration--color:hover {
+  color: var(--first-btn-color);
 }
 
 /* Шапка */
-.header{
-
-
+.header {
+  background-color: #191c26;
+  padding: 32px 0;
 }
-.header__container{
-background-color:#191C26;;
+.header__container {
+  display: flex;
+  align-items: center;
 }
 
-.header__logo{
-
+.header-nav {
+  display: flex;
+  align-items: center;
 }
-.header-nav{
-
+.header-nav__logo {
+  margin-right: 70px;
 }
-.header-nav__list{
+.header-nav__list {
+  display: flex;
 }
-.header-nav__item{
-
+.header-nav__item {
+}
+.header-nav__item:not(:last-child) {
+  margin-right: 40px;
 }
 .header-nav__link {
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 1.33;
-        letter-spacing: 0.1em;
-        color: var(--header-links-color);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: var(--header-links-color);
 }
 .header-nav__link:hover,
-.header-nav__link:focus{
-color: var(--accent-color);
+.header-nav__link:focus {
+  color: var(--accent-color);
 }
-/* .header-contacts{
-
-} */
-.header-contacts__tel{
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.33;
-    letter-spacing: 0.1em;
-    color: var(--header-links-color);
+.header-contacts {
+  margin-left: auto;
+}
+.header-contacts__tel {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: var(--header-links-color);
 }
 
 .header-contacts__tel:hover,
-.header-contacts__tel:focus{
-color: var(--accent-color);
+.header-contacts__tel:focus {
+  color: var(--accent-color);
 }
-
-/* Кнопки реєстрації */
-.btn-registration{
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.33;
-    letter-spacing: 0.09em;
-    color: var(--first-btn-color);
-    text-transform: uppercase;
-    width: 140px;
-    height: 30px;
-    border: 1px solid #FF6C00; 
-    border-radius: 30px;
-    background-color: transparent;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.header-contacts__btn {
+  margin-left: 40px;
 }
-.btn-registration:hover{
-    background-color: var(--accent-color);
-}
-.btn-registration--color {
-    color: var(--second-btn-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.btn-registration--color:hover{
-  color: var(--first-btn-color);
-}
-.prices-btn-container{
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-}
+/* загальні стилі кнопки  реєстрації */
 
 /* Секція "Герой" */
 .hero {
-
 }
-.hero__container{
-    background-color: #844949;
+.hero__container {
+  display: flex;
 }
-.hero-social-list{}
-.hero-social-list__item{}
-.hero-social-list__link{
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 1.36;
-        letter-spacing: 0.2em;
-        color: var(--hero-links-color);
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.hero-social-list {
+  width: 93px;
+}
+.hero-social-list__item {
+}
+.hero-social-list__link {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--hero-links-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-social-list__link:hover,
-.hero-social-list__link:focus{
-    color: var(--accent-color);
+.hero-social-list__link:focus {
+  color: var(--accent-color);
 }
-.hero-left{}
-.hero-left__subtitle{
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 1.36;
-        letter-spacing: 0.1em;
-        color: var(--first-subtitle-color);
-        text-transform: uppercase;
-       
+.hero-right {
+  background-color: #191c26;
+  flex-grow: 1;
+  padding-top: 172px;
+  padding-bottom: 206px;
+  padding-left: 96px;
 }
-.hero-left__title{
-       font-family: Raleway;
-        font-size: 72px;
-        font-weight: 700;
-        line-height: 1.18;
-        letter-spacing: 0.05em;
-        color: var(--first-title-color);    
+.hero-right__pre-title {
+  color: var(--first-subtitle-color);
+  margin-bottom: 20px;
 }
-.hero-left__text{
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.66;
-        letter-spacing: 0.02em;
-        color: var(--first-text-color);
+.hero-right__title {
+  font-family: Raleway;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  color: var(--first-title-color);
+  margin-bottom: 20px;
+}
+.hero-right__after-title {
+  width: 400px;
+
+  color: var(--first-text-color);
 }
 
 /* Секція "Про нас" */
-.about__container{
-
+.about {
+  padding-top: 139px;
+  padding-bottom: 121px;
 }
-.about-list{}
-.about-list__item{}
-.about-list__img{}
-.about-content{}
-.about-content__pre-title{
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 1.36;
-        letter-spacing: 0.1em;
-        color: var(--second-subtitle-color);
-        text-transform: uppercase;
+.about__container {
+  display: flex;
 }
-.about-content__title{
-        font-family: Raleway;
-        font-size: 42px;
-        font-weight: 700;
-        line-height: 1.17;
-        letter-spacing: 0.05em;
-        color: var(--second-title-color);
+.about-list {
+  display: flex;
 }
-.about-content__after-title{
-        font-size: 18px;
-        line-height: 1.67;
-        letter-spacing: 0.02em;
-        color: var(--second-text-color);      
+.about-list__item {
 }
-.about-content__text{
-        font-size: 14px;
-        line-height: 1.86;
-        letter-spacing: 0.02em;
-       
+.about-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+.about-list__img {
+}
+.about-content {
+  margin-left: 64px;
+}
+.about-content__pre-title {
+  color: var(--second-subtitle-color);
+  margin-bottom: 20px;
+}
+.about-content__title {
+  color: var(--second-title-color);
+  margin-bottom: 20px;
+}
+.about-content__after-title {
+  color: var(--second-text-color);
+  margin-bottom: 20px;
+}
+.about-content__text {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  margin-bottom: 44px;
 }
 /* Секція "Послуги і ціни" */
-.prices{
-       background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/price/4bd1963510d23357075bc4fa1c6c7fad.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        opacity: 1.1;
-}
-.prices__container{}
-.prices__subtitle{
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 1.36;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--first-subtitle-color);
-       
-}
-.prices__title{
-        font-family: Raleway;
-        font-size: 72px;
-        font-weight: 700;
-        line-height: 1.18;
-        letter-spacing: 0.05em;
-        color: var(--first-title-color);
-}
-.prices__boxes{
-        display: grid;
-        grid-template-columns: 1fr 1fr
+.prices {
+  padding: 130px 0;
+  background-color: #191c26;
 
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/price/4bd1963510d23357075bc4fa1c6c7fad.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1.1; */
 }
-.prices-list{
-    background-color: rgba(21, 21, 24, 0.6);
-    padding: 30px 40px;
-   
-   
+.prices__container {
 }
-.prices-list__item{
-    
+.prices__pre-title {
+  color: var(--first-subtitle-color);
+  margin-bottom: 20px;
 }
-.prices-list__item:not(:last-child){
-    margin-bottom: 20px;
+.prices__title {
+  color: var(--first-title-color);
+  margin-bottom: 44px;
 }
-.prices-list__service{
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
-    color: var(--first-text-color);
-   
+.prices__wrap {
+  display: flex;
+  margin-bottom: 50px;
+}
+.prices-list {
+  border: 1px solid white;
+  background-color: rgba(21, 21, 24, 0.6);
+  width: 50%;
+  padding: 30px 40px;
+}
+.prices-list__item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--first-text-color);
+  color: var(--first-text-color);
+}
+.prices-list__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.prices-list__service {
+}
+.prices-btn {
+  display: block;
+  margin: 0 auto;
 }
 /* Секція " Чому ми" */
- .reasons__container {}
- .reasons-list{}
- .reasons-list__item{}
- .reasons-list__count{
-        font-size: 42px;
-        font-weight: 700;
-        line-height: 1.36;
-        letter-spacing: 0.05em;
-        text-align: center;
-        color: var(--third-text-color);
- }
- .reasons-list__text{
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 1.36;
-        text-align: center;
-        color: var(--third-text-color);
- }
- .reasons__subtitle{
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 1.36;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--second-subtitle-color);
- }
- .reasons__title{
-       font-family: Raleway;
-        font-size: 42px;
-        font-weight: 700;
-        line-height: 49.31px;
-        letter-spacing: 0.05em;
-        color: var(--second-title-color);
- }
- .reasons__text{
-        font-size: 18px;
-        line-height: 1.67;
-        letter-spacing: 0.02em;
-        color: var(--second-text-color);
- }
+.reasons {
+  padding: 130px 0;
+}
+.reasons__container {
+}
+.reasons-list {
+}
+.reasons-list__item {
+}
+.reasons-list__count {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.36;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: var(--third-text-color);
+}
+.reasons-list__text {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.36;
+  text-align: center;
+  color: var(--third-text-color);
+}
+.reasons__pre-title {
+  color: var(--second-subtitle-color);
+}
+.reasons__title {
+  color: var(--second-title-color);
+}
+.reasons__after-title {
+  color: var(--second-text-color);
+}
 
 /* Секція "Наші майстри" */
-.masters__container{}
-.masters__subtitle{
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 1.36;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--second-subtitle-color);
+.masters {
+  padding: 130px 0;
 }
-.masters__title{
-    font-family: Raleway;
-        font-size: 42px;
-        font-weight: 700;
-        line-height: 49.31px;
-        letter-spacing: 0.05em;
-        color: var(--second-title-color);
+.masters__container {
 }
-.masters-list{}
-.masters-list__item{}
-.masters-list__img{}
-.masters-list__title{
-        font-size: 18px;
-        line-height: 1.67;
-        letter-spacing: 0.02em;
-        color: var(--second-subtitle-color);
-
+.masters__pre-title {
+  color: var(--second-subtitle-color);
+  margin-bottom: 20px;
 }
-.masters-list__text{
-        font-size: 14px;
-        line-height: 1.36;
-        letter-spacing: 0.02em;
-        color: var(--accent-color);
+.masters__title {
+  color: var(--second-title-color);
+  margin-bottom: 44px;
 }
-.masters-social-list{}
-.masters-social-list__item{}
-.masters-social-list__link{}
+.masters-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.masters-list__item {
+}
+.masters-list__img {
+}
+.masters-list__title {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--second-subtitle-color);
+}
+.masters-list__text {
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--accent-color);
+}
+.masters-social-list {
+}
+.masters-social-list__item {
+  text-align: center;
+}
+.masters-social-list__link {
+}
 
 /* Секція "Портфоліо" */
-.gallery__container{}
-.gallery__subtitle{
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 1.36;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--second-subtitle-color);
+.gallery {
+  padding: 130px 0;
 }
-.gallery-list{}
-.gallery-list__item{}
-.gallery-list__img{}
+.gallery__container {
+}
+.gallery__pre-title {
+  color: var(--second-subtitle-color);
+  margin-bottom: 44px;
+}
+.gallery-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.gallery-list__item {
+}
+.gallery-list__img {
+}
 
 /* Секція "Контакти" */
+.contacts {
+  padding: 130px 0;
+  background-color: #191c26;
+}
 .contacts__container {
-    background-color: #191C26;
+  display: flex;
 }
 /* Форма онлайн-запису */
 .online {
-    background-color: #191C26;
+  background-color: #191c26;
+  width: 50%;
 }
 
 .online__title {
-    font-family: Raleway;
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 1.16;
-    letter-spacing: 0.05em;
-    color: var(--first-title-color);
+  color: var(--first-title-color);
+  margin-bottom: 44px;
 }
 
 /* contacts__right */
 
-.contacts__right{}
+.contacts__right {
+  width: 50%;
+  margin-left: 99px;
+}
 
-.contacts__title{
-    font-family: Raleway;
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 1.16;
-    letter-spacing: 0.05em;
-    color: var(--first-title-color)
+.contacts__title {
+  color: var(--first-title-color);
+  margin-bottom: 44px;
 }
-.contacts-address{}
-.contacts-address__list{}
-.contacts-address__item{}
-.contacts-address__link{
-        font-size: 18px;
-        line-height: 1.67;
-        letter-spacing: 0.02em;
-        color:var(--first-text-color);
+.contacts-address {
 }
-.contacts__botton-title{
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 1.36;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--first-title-color);
-        
+.contacts-address__list {
 }
-.contacts__botton-text{
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.36;
-        letter-spacing: 0.02em;
-        color: var(--first-text-color);
+.contacts-address__item {
+}
+.contacts-address__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.contacts-address__link {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--first-text-color);
+}
+.contacts-address__link--decoration {
+  text-decoration: underline;
+}
+.contacts__botton-title {
+  color: var(--first-title-color);
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+.contacts__botton-text {
+  color: var(--first-text-color);
 }
 
 /* Секція "Підвал" */
-.footer__container{
+.footer {
+  padding: 55px 0;
 }
-.footer__copy{
-    font-size: 11px;
-    font-weight: 600;
-    line-height: 1.36;
-    letter-spacing: 0.2em;
-    color: var(--first-text-color);
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.footer-list{}
-.footer-list__item{}
-.footer-list__link{
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 1.36;
-        letter-spacing: 0.2em;
-        color: var(--third-text-color);
+.footer__copy {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--first-text-color);
+}
+.footer-list {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.footer-list__item {
+}
+.footer-list__item:not(:last-child) {
+  margin-right: 40px;
+}
+.footer-list__link {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--third-text-color);
 }
